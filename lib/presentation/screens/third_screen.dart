@@ -1,21 +1,19 @@
-import 'package:counter_bloc/presentation/screens/second_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../logic/cubit/counter_cubit.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key, required this.title, required this.color})
-      : super(key: key);
+class ThirdScreen extends StatefulWidget {
+  const ThirdScreen({Key? key, required this.title, required this.color}) : super(key: key);
 
   final String title;
   final Color color;
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<ThirdScreen> createState() => _ThirdScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _ThirdScreenState extends State<ThirdScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,13 +58,13 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 FloatingActionButton(
                   onPressed: () =>
-                      {BlocProvider.of<CounterCubit>(context).decrement()},
+                  {BlocProvider.of<CounterCubit>(context).decrement()},
                   tooltip: 'Decrement',
                   child: const Icon(Icons.remove),
                 ),
                 FloatingActionButton(
                   onPressed: () =>
-                      {BlocProvider.of<CounterCubit>(context).increment()},
+                  {BlocProvider.of<CounterCubit>(context).increment()},
                   tooltip: 'Increment',
                   child: const Icon(Icons.add),
                 ),
@@ -76,22 +74,10 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 24,
             ),
             MaterialButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/second');
-              },
-              color: widget.color,
-              child: const Text('Co to Second Screen'),
-            ),
-            const SizedBox(
-              height: 24,
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/third');
-              },
+              onPressed: () {},
               color: widget.color,
               child: const Text('Co to Third Screen'),
-            ),
+            )
           ],
         ),
       ),
