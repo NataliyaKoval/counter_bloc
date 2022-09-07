@@ -76,7 +76,7 @@ class _SecondScreenState extends State<SecondScreen> {
             MaterialButton(
               onPressed: () {},
               color: widget.color,
-              child: const Text('Co to Second Screen'),
+              child: const Text('Second screen button'),
             )
           ],
         ),

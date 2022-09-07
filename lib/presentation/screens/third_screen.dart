@@ -76,7 +76,7 @@ class _ThirdScreenState extends State<ThirdScreen> {
             MaterialButton(
               onPressed: () {},
               color: widget.color,
-              child: const Text('Co to Third Screen'),
+              child: const Text('Third screen button'),
             )
           ],
         ),
